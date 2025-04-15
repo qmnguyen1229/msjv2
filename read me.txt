@@ -1,0 +1,27 @@
+# Motion for Summary Judgment Outcome Predictor
+
+This tool predicts the likely outcome of a Motion for Summary Judgment (MSJ) based on party types, case type, and filing party. It was developed as a final project for Professor Andrew Torrance's Legal Analytics class at the University of Kansas School of Law.
+
+## Features
+
+- Predict outcomes (Granted, Denied, Partially Granted/Denied)
+- Compare “What-If” scenarios and generate PDF reports
+- Interactive UI powered by Streamlit
+
+## Authors
+
+- Liam Bigbee  
+- Lauren Bretz  
+- Quan Nguyen
+
+## Disclaimer
+
+This program is just a school project and **should not** be used to predict the outcome of real-world motions.
+
+## Running the App
+
+1. Clone this repo or download the code  
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
