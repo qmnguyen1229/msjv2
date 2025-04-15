@@ -72,15 +72,17 @@ with tab2:
 
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("#### Original Inputs")
-        plaintiff_type = st.selectbox("Plaintiff Type", le_plaintiff.classes_, key="plaintiff_orig")
-        defendant_type = st.selectbox("Defendant Type", le_defendant.classes_, key="defendant_orig")
-        filing_party = st.selectbox("Filing Party", le_filing.classes_, key="filer_orig")
-    with col2:
-        st.markdown("#### What-If Inputs")
-        whatif_plaintiff_type = st.selectbox("Plaintiff Type", le_plaintiff.classes_, key="plaintiff_whatif")
-        whatif_defendant_type = st.selectbox("Defendant Type", le_defendant.classes_, key="defendant_whatif")
-        whatif_filing_party = st.selectbox("Filing Party", le_filing.classes_, key="filer_whatif")
+    st.markdown("#### Original Inputs")
+    plaintiff_type = st.selectbox("Plaintiff Type", le_plaintiff.classes_, key="plaintiff_orig")
+    defendant_type = st.selectbox("Defendant Type", le_defendant.classes_, key="defendant_orig")
+    filing_party = st.selectbox("Filing Party", le_filing.classes_, key="filer_orig")
+
+# What-If Inputs
+with col2:
+    st.markdown("#### What-If Inputs")
+    whatif_plaintiff_type = st.selectbox("Plaintiff Type", le_plaintiff.classes_, key="plaintiff_whatif")
+    whatif_defendant_type = st.selectbox("Defendant Type", le_defendant.classes_, key="defendant_whatif")
+    whatif_filing_party = st.selectbox("Filing Party", le_filing.classes_, key="filer_whatif")
 
     if st.button("Run What-If Comparison"):
         enc = lambda l, v: l.transform([v])[0]
